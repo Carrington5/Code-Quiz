@@ -87,3 +87,59 @@ const endQuiz = function() {
     buttConEl.remove(buttConEl);        
 }
 
+// Answer Submission function
+const answerSubmit = function() {
+
+    // check question number
+    if (qNum < questions.length) {
+    while (buttConEl.firstChild) {
+        buttConEl.removeChild(buttConEl.firstChild);
+        }
+    } else if (qNum = questions.length) {
+        while (buttConEl.firstChild) {
+            buttConEl.removeChild(buttConEl.firstChild);
+            } endQuiz()
+    }
+
+    // update question and options
+    questionEl.textContent = questions[qNum].question;
+
+    var optA = document.createElement("button")
+        optA.className ="btn";
+        optA.id ="answer-buttons";
+        optA.textContent = questions[qNum].a
+    var optB = document.createElement("button");
+        optB.className ="btn";
+        optB.id ="answer-buttons";
+        optB.textContent = questions[qNum].b
+    var optC = document.createElement("button");
+        optC.className ="btn";
+        optC.id ="answer-buttons";
+        optC.textContent = questions[qNum].c
+    var optD = document.createElement("button");
+        optD.className ="btn";
+        optD.id ="answer-buttons";
+        optD.textContent = questions[qNum].d
+
+    buttConEl.appendChild(optA);
+    buttConEl.appendChild(optB);
+    buttConEl.appendChild(optC);
+    buttConEl.appendChild(optD);
+}
+
+    // button selection
+    const buttonSelect = function() {
+        var userSelect = event.target;
+        var selection = userSelect.innerText;
+        
+        if (userSelect.matches("#start-button")) {
+            answerSubmit();
+            timerID = setInterval(countdown, 1000);
+            // countdown();
+        } else {
+            answerSubmit();
+            validateSelection(selection);
+        }
+    }
+
+buttConEl.addEventListener("click", buttonSelect);
