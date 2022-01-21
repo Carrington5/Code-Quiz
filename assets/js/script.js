@@ -16,7 +16,7 @@ timerEl.innerHTML = timer;
 
 // Timer function
 const countdown = function() {
-    if (tiner <= 0) {
+    if (timer <= 0) {
         clearInterval(timerID);
         timerEl.innerHTML ="0"
         endQuiz();
