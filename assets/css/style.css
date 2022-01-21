@@ -1,0 +1,44 @@
+/*styling for the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: floralwhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Header styling */
+header {
+    background-color: fuchsia;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    width: 100%;
+    border-bottom: 5px solid goldenrod;
+}
+
+.veiw-high-score, .time-remaining, .timer {
+    font-size: 25px;
+}
+
+.veiw-high-score {
+    text-decoration: none;
+    padding-top: 10px;
+    color:black;
+}
+
+.time-remaining {
+    padding-right: 10px;
+}
+
+/* styling for the page */
+.question {
+    font-size: 32px;
+    font-style: bold;
+    margin: 100px 100px;
+}
+
