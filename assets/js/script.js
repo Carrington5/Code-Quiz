@@ -62,3 +62,28 @@ const q3 = {
     d: "D. ESLint",
     answer: "D. ESLint"
 }
+
+let questions = [q0, q1, q2, q3,]
+
+// validate question selection
+const validateSelection = function(selection) {
+    if (selection === questions[qNum].answer) {
+        score+= 10;
+        responseEl.textContent = "Correct!";
+    } else {
+        timer-= 10;
+        timerEl.textContent = timer;
+        responseEl.textContent = "Wrong!";
+    }
+
+    qNum++;
+
+    answerSubmit()
+}
+
+// End quiz
+const endQuiz = function() {
+    questionEl.textContent = "You have completed the quiz! Thank you for your participation! Refresh the page to take again."
+    buttConEl.remove(buttConEl);        
+}
+
