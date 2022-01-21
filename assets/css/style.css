@@ -42,3 +42,36 @@ header {
     margin: 100px 100px;
 }
 
+.answer-choices {
+    margin: 20px 100px;
+}
+
+.btn {
+    outline: none;
+    border:none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: blueviolet(180,78, 248);
+    font-size: 18px;
+    top: -3px;
+    box-shadow: 2px 4px gray;
+}
+
+.btn:hover {
+    box-shadow: 1px 2px gray;
+    top: -2px;
+    background: indianred(225, 186, 252)
+}
+
+.btn:active {
+    box-shadow: 0 0px gray;
+    top: 0;
+}
+
+.response {
+    font-size: 20pt;
+    color: gray;
+    padding: 10px 20px;
+    margin: 20px 100px;
+    border-top: 3px solid rgb(95, 95, 95);
+}
